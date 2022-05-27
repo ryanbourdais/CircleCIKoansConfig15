@@ -12,8 +12,7 @@ jobs:
     steps:
       - checkout
       - run: echo "I was run normally"
-      - run: "curl --request POST \ --url https://circleci.com/api/v2/project/github/ryanbourdais/CircleCIKoansConfig15/pipeline \ --header 'authorization: Basic [4d08abc88549cbf740eabaee8e768225a370d44d]' \ --header 'content-type: application/json' \ "
-
+      
   api-job:
     docker:
       - image: cimg/base:2022.03
@@ -31,4 +30,5 @@ workflows:
     jobs:
       - api-job
 
-# 4d08abc88549cbf740eabaee8e768225a370d44d
+# admin key: 4d08abc88549cbf740eabaee8e768225a370d44d  base64: ODVjN2I4ODJhZmRiMTRhMzNkZDZjMWQ3MjFlNGEyMjgzODk3ZGE3Nw==
+# read key:  1f31d562afed6004c2738d06a50f716f71591dbc  base64: MWYzMWQ1NjJhZmVkNjAwNGMyNzM4ZDA2YTUwZjcxNmY3MTU5MWRiYw==
