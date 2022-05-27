@@ -30,5 +30,4 @@ workflows:
     jobs:
       - api-job
 
-# admin key: 4d08abc88549cbf740eabaee8e768225a370d44d  base64: ODVjN2I4ODJhZmRiMTRhMzNkZDZjMWQ3MjFlNGEyMjgzODk3ZGE3Nw==
-# read key:  1f31d562afed6004c2738d06a50f716f71591dbc  base64: MWYzMWQ1NjJhZmVkNjAwNGMyNzM4ZDA2YTUwZjcxNmY3MTU5MWRiYw==
+# curl --request POST  --url "https://circleci.com/api/v2/project/gh/ryanbourdais/CircleCIKoansConfig15/pipeline" --header 'authorization: Basic <Base64 User Key>' --header 'content-type: application/json' --data '{"branch": "master", "parameters": { "run_by_api":true}}'
