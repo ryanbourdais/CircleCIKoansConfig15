@@ -12,6 +12,7 @@ jobs:
     steps:
       - checkout
       - run: echo "I was run normally"
+      - run: "curl --request POST \ --url https://circlci.com/api/v2/project/github/ryanbourdais/CircleCIKoansConfig15/pipeline \ --header 'authorization: Basic 4d08abc88549cbf740eabaee8e768225a370d44d' \ --header 'content-type: application/json' \ --data '[JSON_DATA]'"
 
   api-job:
     docker:
@@ -29,3 +30,5 @@ workflows:
     when: << pipeline.parameters.run_by_api >> # Without modifying the config, run api-job
     jobs:
       - api-job
+
+# 4d08abc88549cbf740eabaee8e768225a370d44d
